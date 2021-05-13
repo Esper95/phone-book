@@ -7,8 +7,8 @@ class PhoneForm extends Component{
     }
     handleChange = (e) => {
         this.setState({
-            [e.target.name] : e.target.value
-        });
+            [e.target.name]: e.target.value
+        })
     }
     handleSubmit = (e) => {
         //페이지 리로딩 방지
@@ -22,7 +22,7 @@ class PhoneForm extends Component{
     }
     render() {
         return(
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <input
                     placeholder='이름'
                     value={this.state.name}
